@@ -119,6 +119,7 @@ app.post("/signup/google", async (req, res) => {
   }
 });
 
+
 // LinkedIn Signup Route
 const axios = require("axios");
 
@@ -182,6 +183,11 @@ app.post("/signup/linkedin", async (req, res) => {
     res.status(500).json({ error: "LinkedIn signup failed" });
   }
 });
+app.post("/logout", (req, res) => {
+    res.status(200).json({ message: "Logged out successfully" });
+  });
+  
+  
 
 // Default route
 app.get("/", (req, res) => {
