@@ -5,6 +5,7 @@ import axios from 'axios';
 const Home = ({ username, setIsAuthenticated }) => {
   const navigate = useNavigate();
 
+  
   const handleLogout = async () => {
     try {
       const response = await axios.post('http://localhost:4000/logout', {}, {
